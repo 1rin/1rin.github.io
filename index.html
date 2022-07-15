@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="">
+<meta name="description" content="一凛的避难所">
+<meta name="theme-color" content="#000">
+<title>Ichrin&#39;s SHELTER</title>
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/favicon.ico?v=1657893812379">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/media/css/gemini.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/styles/main.css">
+
+<script src="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="gemini">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Ichrin&#39;s SHELTER</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">Ichrin的博客</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item nav-item-active">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about-me/" target="_self">
+                  <i class="fa fa-globe"></i> 关于我
+                </a>
+              
+            </li>
+          
+            
+            
+              
+                <li class="nav-item ">
+                  <a href="/friends/" target="_blank">
+                    
+                      <i class="fa fa-address-book"></i>友情链接
+                    
+                  </a>
+                </li>
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/ichrin-secret/" target="_self">
+                  <i class="fa fa-globe"></i> 小秘密
+                </a>
+              
+            </li>
+          
+          
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout gemini ">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/images/avatar.png"/>
+    <p class="site-author-name">一凛</p>
+    
+    <div class="site-description right-motion">
+      
+      
+      
+        <p>一个小丧的学生党 </p>
+      
+        <p> 专业电灯泡扮演者 </p>
+      
+        <p> 家里蹲 </p>
+      
+        <p> 归家部名誉部员</p>
+      
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">7</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+  
+  
+
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box gemini">
+          <section class="section  posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://shelter.ichrin.eu.org/post/gong-gao-ban/">
+      公告板
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item">
+      <i class="fa fa-thumb-tack"></i>
+      <span class="language" data-lan="top">置顶</span>
+      <span class="post-meta-divider">|</span>
+    </span>
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-12-31 23:59:59">2020-12-31</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>281<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h3 id="20201231">2020.12.31</h3>
+<p>从2021年开始，这个博客将正式启用。<br>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://shelter.ichrin.eu.org/post/gong-gao-ban/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://shelter.ichrin.eu.org/post/heaven/">
+      留言板板
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="9999-12-31 23:59:59">9999-12-31</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://shelter.ichrin.eu.org/tag/m1Z1LFtxB/">
+        <span>Shelter</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>60<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h1 id="畅所欲言吧">畅所欲言吧！</h1>
+<p>使用评论区即可。<br>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://shelter.ichrin.eu.org/post/heaven/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://shelter.ichrin.eu.org/post/ichrin-diary-2022sum/">
+      一凛的小本本（2022年暑假开始的）
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2022-07-10 19:50:41">2022-07-10</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>3<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>713<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h3 id="这是一凛在2022年暑假开始时的日记">这是一凛在2022年暑假开始时的日记。</h3>
+<h3 id="记录的东西均属实-但经常有无节操发言并由内而外散发出一凛独有的丧的气息">记录的东西均属实。但经常有无节操发言，并由内而外散发出一凛独有的“丧”的气息。</h3>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://shelter.ichrin.eu.org/post/ichrin-diary-2022sum/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://shelter.ichrin.eu.org/post/projektshadows/">
+      Projekt-Shadows 剧情流程（截止Alpha0.0.2.67）
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-12-31 00:00:00">2021-12-31</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://shelter.ichrin.eu.org/tag/m1Z1LFtxB/">
+        <span>Shelter</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>6<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1609<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h1 id="注释0指的是凛即游戏中的引导者可操控角色1指的是玩家游戏的视角指旁白-是选项-数字后带的部分是心理动态">注释：“0”指的是凛（即游戏中的引导者，可操控角色），“1”指的是玩家（游戏的视角），“%”指旁白，“-”是选项。数字后带*的部分是心理动态。</h1>
+<h4 id="说明projekt-shadows最终解释权归7lab-1rin所有-请注意projekt-shadows仅仅为开发代号并无实际意义-剧情流程将随着开发进度而更新且现有剧情并非最终版本随着更新将会改动">说明：Projekt-Shadows最终解释权归7Lab-1rin所有。请注意:Projekt-Shadows仅仅为开发代号，并无实际意义。剧情流程将随着开发进度而更新，且现有剧情并非最终版本，随着更新将会改动。</h4>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://shelter.ichrin.eu.org/post/projektshadows/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://shelter.ichrin.eu.org/post/bangumi-sharelist/">
+      荐番目录！(持续更新)
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-07-10 21:58:07">2021-07-10</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://shelter.ichrin.eu.org/tag/m1Z1LFtxB/">
+        <span>Shelter</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>199<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h1 id="排名不分先后">排名不分先后</h1>
+<ol>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://shelter.ichrin.eu.org/post/bangumi-sharelist/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://shelter.ichrin.eu.org/post/diary-of-ichrin/">
+      一凛的小本本（2021年初-2021年夏季）
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-12-31 23:59:59">2020-12-31</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>6<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1480<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h2 id="20201231">2020.12.31</h2>
+<p>这是我的“日记”<br>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://shelter.ichrin.eu.org/post/diary-of-ichrin/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://shelter.ichrin.eu.org/post/projekt-notitle/">
+      Projekt-暂无标题
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="1970-01-01 00:00:00">1970-01-01</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://shelter.ichrin.eu.org/tag/m1Z1LFtxB/">
+        <span>Shelter</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>8<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>2292<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h2 id="怀着乱七八糟的心情和乱七八糟的想法所写的乱七八糟的东西">怀着乱七八糟的心情和乱七八糟的想法所写的乱七八糟的东西。</h2>
+<h2 id="翻译一下就是这个文章是随便乱写的不要当真-如有雷同纯属巧合">翻译一下就是：这个文章是随便乱写的，不要当真。如有雷同纯属巧合。</h2>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://shelter.ichrin.eu.org/post/projekt-notitle/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+  
+            
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+    
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+    
+    
+  </ul>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
+        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/1rin/1rin" target="_blank">Ichrin</a>
+    </div>
+  </footer>
+  
+  
+  <div class="gemini back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/media/live2d/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left: 5px;bottom: 0px;"
+    data-key="">
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    
+
+      <div class="message" style="opacity:0"></div>
+      <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
+            placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
+            placeholder="要和我聊什么呀？" />
+          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+      </div>
+      <input name="live_talk" id="live_talk" value="1" type="hidden" />
+      <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input id="duType" value="douqilai" type="hidden">
+        
+      </div>
+    
+  </div>
+</div>
+<div id="open_live2d">召唤看板娘</div>
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
+  let landlord = document.querySelector('#landlord');
+  var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/media/live2d/js/live2d.js"></script>
+<script>
+	var home_Path = document.location.protocol + '//' + window.document.location.hostname + ":" + window.document.location.port + '/';
+	var userAgent = window.navigator.userAgent.toLowerCase();
+	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
+	var norunFlag = false;
+
+	for (var i = 0; i < norunAI.length; i++) {
+		if (userAgent.indexOf(norunAI[i]) > -1) {
+			norunFlag = true;
+			break;
+		}
+	}
+
+	if (!window.WebGLRenderingContext) {
+		norunFlag = true;
+	}
+
+	if (!norunFlag) {
+		var hitFlag = false;
+		var AIFadeFlag = false;
+		var liveTlakTimer = null;
+		var sleepTimer_ = null;
+		var AITalkFlag = false;
+		var talkNum = 0;
+		(function () {
+			function renderTip(template, context) {
+				var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
+				return template.replace(tokenReg, function (word, slash1, token, slash2) {
+					if (slash1 || slash2) {
+						return word.replace('\\', '');
+					}
+					var variables = token.replace(/\s/g, '').split('.');
+					var currentObject = context;
+					var i, length, variable;
+					for (i = 0, length = variables.length; i < length; ++i) {
+						variable = variables[i];
+						currentObject = currentObject[variable];
+						if (currentObject === undefined || currentObject === null) return '';
+					}
+					return currentObject;
+				});
+			}
+
+			String.prototype.renderTip = function (context) {
+				return renderTip(this, context);
+			};
+
+			var re = /x/;
+			re.toString = function () {
+				showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
+				return '';
+			};
+
+			$(document).on('copy', function () {
+				showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
+			});
+
+			function initTips() {
+				$.ajax({
+					cache: true,
+					url: message_Path + 'message.json',
+					dataType: "json",
+					success: function (result) {
+						$.each(result.mouseover, function (index, tips) {
+							$(tips.selector).mouseover(function () {
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+								talkValTimer();
+								clearInterval(liveTlakTimer);
+								liveTlakTimer = null;
+							});
+							$(tips.selector).mouseout(function () {
+								showHitokoto();
+								if (liveTlakTimer == null) {
+									liveTlakTimer = window.setInterval(function () {
+										showHitokoto();
+									}, 15000);
+								};
+							});
+						});
+						$.each(result.click, function (index, tips) {
+							$(tips.selector).click(function () {
+								if (hitFlag) {
+									return false
+								}
+								hitFlag = true;
+								setTimeout(function () {
+									hitFlag = false;
+								}, 8000);
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+							});
+							clearInterval(liveTlakTimer);
+							liveTlakTimer = null;
+							if (liveTlakTimer == null) {
+								liveTlakTimer = window.setInterval(function () {
+									showHitokoto();
+								}, 15000);
+							};
+						});
+					}
+				});
+			}
+			initTips();
+
+			var text;
+			if (document.referrer !== '') {
+				var referrer = document.createElement('a');
+				referrer.href = document.referrer;
+				text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
+				var domain = referrer.hostname.split('.')[1];
+				if (domain == 'baidu') {
+					text = '嗨！ 来自 百度搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'so') {
+					text = '嗨！ 来自 360搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'google') {
+					text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			} else {
+				if (window.location.href == home_Path) { //主页URL判断，需要斜杠结尾
+					var now = (new Date()).getHours();
+					if (now > 23 || now <= 5) {
+						text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
+					} else if (now > 5 && now <= 7) {
+						text = '早上好！一日之计在于晨，美好的一天就要开始了！';
+					} else if (now > 7 && now <= 11) {
+						text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+					} else if (now > 11 && now <= 14) {
+						text = '中午了，工作了一个上午，现在是午餐时间！';
+					} else if (now > 14 && now <= 17) {
+						text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+					} else if (now > 17 && now <= 19) {
+						text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~~';
+					} else if (now > 19 && now <= 21) {
+						text = '晚上好，今天过得怎么样？';
+					} else if (now > 21 && now <= 23) {
+						text = '已经这么晚了呀，早点休息吧，晚安~~';
+					} else {
+						text = '嗨~ 快来逗我玩吧！';
+					}
+				} else {
+					text = '欢迎阅读<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			}
+			showMessage(text, 12000);
+		})();
+
+		liveTlakTimer = setInterval(function () {
+			showHitokoto();
+		}, 15000);
+
+		function showHitokoto() {
+			if (sessionStorage.getItem("Sleepy") !== "1") {
+				if (!AITalkFlag) {
+					$.getJSON('https://v1.hitokoto.cn/', function (result) {
+						talkValTimer();
+						showMessage(result.hitokoto, 0);
+					});
+				}
+			} else {
+				hideMessage(0);
+				if (sleepTimer_ == null) {
+					sleepTimer_ = setInterval(function () {
+						checkSleep();
+					}, 200);
+				}
+			}
+		}
+
+		function checkSleep() {
+			var sleepStatu = sessionStorage.getItem("Sleepy");
+			if (sleepStatu !== '1') {
+				talkValTimer();
+				showMessage('你回来啦~', 0);
+				clearInterval(sleepTimer_);
+				sleepTimer_ = null;
+			}
+		}
+
+		function showMessage(text, timeout) {
+			if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1];
+			$('.message').stop();
+			$('.message').html(text);
+			$('.message').fadeTo(200, 1);
+			//if (timeout === null) timeout = 5000;
+			//hideMessage(timeout);
+		}
+		function talkValTimer() {
+			$('#live_talk').val('1');
+		}
+
+		function hideMessage(timeout) {
+			//$('.message').stop().css('opacity',1);
+			if (timeout === null) timeout = 5000;
+			$('.message').delay(timeout).fadeTo(200, 0);
+		}
+
+		function initLive2d() {
+			$('#hideButton').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "0");
+					$('#landlord').fadeOut(200);
+					$('#open_live2d').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#open_live2d').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "1");
+					$('#open_live2d').fadeOut(200);
+					$('#landlord').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#youduButton').on('click', function () {
+				if ($('#youduButton').hasClass('doudong')) {
+					var typeIs = $('#youduButton').attr('data-type');
+					$('#youduButton').removeClass('doudong');
+					$('body').removeClass(typeIs);
+					$('#youduButton').attr('data-type', '');
+				} else {
+					var duType = $('#duType').val();
+					var duArr = duType.split(",");
+					var dataType = duArr[Math.floor(Math.random() * duArr.length)];
+
+					$('#youduButton').addClass('doudong');
+					$('#youduButton').attr('data-type', dataType);
+					$('body').addClass(dataType);
+				}
+			});
+			if (apiKey) {
+				$('#showInfoBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "0") {
+						return
+					} else {
+						$('#live_statu_val').val("0");
+						$('.live_talk_input_body').fadeOut(500);
+						AITalkFlag = false;
+						showHitokoto();
+						$('#showTalkBtn').show();
+						$('#showInfoBtn').hide();
+					}
+				});
+				$('#showTalkBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "1") {
+						return
+					} else {
+						$('#live_statu_val').val("1");
+						$('.live_talk_input_body').fadeIn(500);
+						AITalkFlag = true;
+						$('#showTalkBtn').hide();
+						$('#showInfoBtn').show();
+
+					}
+				});
+				$('#talk_send').on('click', function () {
+					var info_ = $('#AIuserText').val();
+					var userid_ = $('#AIuserName').val();
+					if (info_ == "") {
+						showMessage('写点什么吧！', 0);
+						return;
+					}
+					if (userid_ == "") {
+						showMessage('聊之前请告诉我你的名字吧！', 0);
+						return;
+					}
+					showMessage('思考中~', 0);
+					let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
+					$.ajax({
+						type: "get",
+						url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
+						dataType: "json",
+						success: function (res) {
+							talkValTimer();
+							showMessage(res.text, 0);
+							$('#AIuserText').val("");
+							sessionStorage.setItem("live2duser", userid_);
+						},
+						error: function (e) {
+							talkValTimer();
+							showMessage('似乎有什么错误，请和站长联系！', 0);
+						}
+					});
+				});
+			} else {
+				$('#showInfoBtn').hide();
+				$('#showTalkBtn').hide();
+			}
+			//获取音乐信息初始化
+			var bgmListInfo = $('input[name=live2dBGM]');
+			if (bgmListInfo.length == 0) {
+				$('#musicButton').hide();
+			} else {
+				var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+				var bgmPlayTime = 0;
+				var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
+				var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
+				if (live2dBGM_Num) {
+					if (live2dBGM_Num <= $('input[name=live2dBGM]').length - 1) {
+						bgmPlayNow = parseInt(live2dBGM_Num);
+					}
+				}
+				if (live2dBGM_PlayTime) {
+					bgmPlayTime = parseInt(live2dBGM_PlayTime);
+				}
+				var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
+				$('#live2d_bgm').attr('data-bgm', bgmPlayNow);
+				$('#live2d_bgm').attr('src', live2dBGMSrc);
+				$('#live2d_bgm')[0].currentTime = bgmPlayTime;
+				$('#live2d_bgm')[0].volume = 0.5;
+				var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
+				var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
+				if (live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0') {
+					$('#live2d_bgm')[0].play();
+					$('#musicButton').addClass('play');
+				}
+				sessionStorage.setItem("live2dBGM_WindowClose", '1');
+				$('#musicButton').on('click', function () {
+					if ($('#musicButton').hasClass('play')) {
+						$('#live2d_bgm')[0].pause();
+						$('#musicButton').removeClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '1');
+					} else {
+						$('#live2d_bgm')[0].play();
+						$('#musicButton').addClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				});
+				window.onbeforeunload = function () {
+					sessionStorage.setItem("live2dBGM_WindowClose", '0');
+					if ($('#musicButton').hasClass('play')) {
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				}
+				document.getElementById('live2d_bgm').addEventListener("timeupdate", function () {
+					var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
+					sessionStorage.setItem("live2dBGM_PlayTime", live2dBgmPlayTimeNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("ended", function () {
+					var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+					listNow++;
+					if (listNow > $('input[name=live2dBGM]').length - 1) {
+						listNow = 0;
+					}
+					var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
+					sessionStorage.setItem("live2dBGM_Num", listNow);
+					$('#live2d_bgm').attr('src', listNewSrc);
+					$('#live2d_bgm')[0].play();
+					$('#live2d_bgm').attr('data-bgm', listNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("error", function () {
+					$('#live2d_bgm')[0].pause();
+					$('#musicButton').removeClass('play');
+					showMessage('音乐似乎加载不出来了呢！', 0);
+				});
+			}
+			//获取用户名
+			var live2dUser = sessionStorage.getItem("live2duser");
+			if (live2dUser !== null) {
+				$('#AIuserName').val(live2dUser);
+			}
+			//获取位置
+			var landL = sessionStorage.getItem("historywidth");
+			var landB = sessionStorage.getItem("historyheight");
+			if (landL == null || landB == null) {
+				landL = '5px'
+				landB = '0px'
+			}
+			$('#landlord').css('left', landL + 'px');
+			$('#landlord').css('bottom', landB + 'px');
+			//移动
+			function getEvent() {
+				return window.event || arguments.callee.caller.arguments[0];
+			}
+			var smcc = document.getElementById("landlord");
+			var moveX = 0;
+			var moveY = 0;
+			var moveBottom = 0;
+			var moveLeft = 0;
+			var moveable = false;
+			var docMouseMoveEvent = document.onmousemove;
+			var docMouseUpEvent = document.onmouseup;
+			smcc.onmousedown = function () {
+				var ent = getEvent();
+				moveable = true;
+				moveX = ent.clientX;
+				moveY = ent.clientY;
+				var obj = smcc;
+				moveBottom = parseInt(obj.style.bottom);
+				moveLeft = parseInt(obj.style.left);
+				if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
+					window.getSelection().removeAllRanges();
+				}
+				document.onmousemove = function () {
+					if (moveable) {
+						var ent = getEvent();
+						var x = moveLeft + ent.clientX - moveX;
+						var y = moveBottom + (moveY - ent.clientY);
+						obj.style.left = x + "px";
+						obj.style.bottom = y + "px";
+					}
+				};
+				document.onmouseup = function () {
+					if (moveable) {
+						var historywidth = obj.style.left;
+						var historyheight = obj.style.bottom;
+						historywidth = historywidth.replace('px', '');
+						historyheight = historyheight.replace('px', '');
+						sessionStorage.setItem("historywidth", historywidth);
+						sessionStorage.setItem("historyheight", historyheight);
+						document.onmousemove = docMouseMoveEvent;
+						document.onmouseup = docMouseUpEvent;
+						moveable = false;
+						moveX = 0;
+						moveY = 0;
+						moveBottom = 0;
+						moveLeft = 0;
+					}
+				};
+			};
+		}
+		$(document).ready(function () {
+			var AIimgSrc = [];
+			let chooseLive2d = 'rem'
+			if (chooseLive2d === 'histoire') {
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_02.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
+			} else if (chooseLive2d === 'rem') {
+				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
+			} else if (chooseLive2d === 'aoba') {
+				AIimgSrc.push(message_Path + "model/aoba/textures/texture_00.png");
+			} else if (chooseLive2d === 'hijiki') {
+				AIimgSrc.push(message_Path + "model/hijiki/moc/hijiki.2048/texture_00.png");
+			} else if (chooseLive2d === 'tororo') {
+				AIimgSrc.push(message_Path + "model/tororo/moc/tororo.2048/texture_00.png");
+			}
+			var images = [];
+			var imgLength = AIimgSrc.length;
+			var loadingNum = 0;
+			for (var i = 0; i < imgLength; i++) {
+				images[i] = new Image();
+				images[i].src = AIimgSrc[i];
+				images[i].onload = function () {
+					loadingNum++;
+					if (loadingNum === imgLength) {
+						var live2dhidden = localStorage.getItem("live2dhidden");
+						if (live2dhidden === "0") {
+							setTimeout(function () {
+								$('#open_live2d').fadeIn(200);
+							}, 1300);
+						} else {
+							setTimeout(function () {
+								$('#landlord').fadeIn(200);
+							}, 1300);
+						}
+						let model = '';
+						if (chooseLive2d === 'histoire') {
+							model = message_Path + "model/histoire/model.json";
+						} else if (chooseLive2d === 'rem') {
+							model = message_Path + "model/rem/model.json";
+						} else if (chooseLive2d === 'aoba') {
+							model = message_Path + "model/aoba/model.json";
+						} else if (chooseLive2d === 'hijiki') {
+							model = message_Path + "model/hijiki/hijiki.model.json";
+						} else if (chooseLive2d === 'tororo') {
+							model = message_Path + "model/tororo/tororo.model.json";
+						}
+						setTimeout(function () {
+							loadlive2d("live2d", model);
+						}, 1000);
+						initLive2d();
+						images = null;
+					}
+				}
+			}
+		});
+	}
+</script>
+  
+  
+  
+  <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://player.lmih.cn/player/js/player.js" id="myhk" key="demo" m="1"></script>
+
+
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener('scroll', function (e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+
+  let hasCacu = false;
+  window.onresize = function () {
+    calcuHeight();
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, transitionDir, {});
+          }
+        })
+        window.Velocity(viewport, openProp, {
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'false'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target", "_blank");
+      }
+    })
+  }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch.addEventListener('click', function () {
+    document.querySelector('#search_mask').style = ''
+  })
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+  
+  // 离开当前页title变化
+  var leaveTitle = "";
+  if (leaveTitle) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+
+</script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px;border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+  </div>
+</body>
+
+<div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://shelter.ichrin.eu.org/post/heaven/"" data-c="
+          &lt;h1 id=&#34;畅所欲言吧&#34;&gt;畅所欲言吧！&lt;/h1&gt;
+&lt;p&gt;使用评论区即可。&lt;br&gt;
+虽然...没有人会用的。&lt;br&gt;
+访问这个站点的人想必很少很少吧？&lt;br&gt;
+算了。孤高游荡的灵魂不需要羁绊之地（孤魂野鬼没有坟头）！&lt;br&gt;
+TvT&lt;/p&gt;
+">留言板板</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://shelter.ichrin.eu.org/post/ichrin-diary-2022sum/"" data-c="
+          &lt;h3 id=&#34;这是一凛在2022年暑假开始时的日记&#34;&gt;这是一凛在2022年暑假开始时的日记。&lt;/h3&gt;
+&lt;h3 id=&#34;记录的东西均属实-但经常有无节操发言并由内而外散发出一凛独有的丧的气息&#34;&gt;记录的东西均属实。但经常有无节操发言，并由内而外散发出一凛独有的“丧”的气息。&lt;/h3&gt;
+&lt;h3 id=&#34;查阅方式以下面这条分割线为起始最靠近分割线的就是最新的日记&#34;&gt;查阅方式：以下面这条分割线为起始，最靠近分割线的就是最新的日记。&lt;/h3&gt;
+&lt;h1 id=&#34;请-假-装-我-是-一-条-分-割-线&#34;&gt;&lt;s&gt;请  假  装  我  是  一  条  分  割  线&lt;/s&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;2022715&#34;&gt;2022.7.15&lt;/h2&gt;
+&lt;p&gt;今天去参观了一双外的岛外校区。&lt;br&gt;
+虽然厦外集美分校离家近，骑自行车不过十五分钟！我很心动！但是里面的设施还不太完善，校园空间也偏小，虽然我不在乎这些条件，但我爸妈坚决反对，也不知道为何？明明之前也是赞成的。双十翔安校区则是根本没建设完，再加上附近交通设施不完善，校内设施大多没开始使用虽然它校内空间真的超大，校内校外还有工地，是说担心安全问题。&lt;br&gt;
+于是转而优先填报一中海沧校区。校内设施齐全且大多数设施可使用，宿舍空间较大且交通较方便（比不上离家近的厦外就是了）&lt;br&gt;
+真是的。明明无脑填科技中学就可以了啊，100%能进。&lt;/p&gt;
+&lt;h2 id=&#34;2022712&#34;&gt;2022.7.12&lt;/h2&gt;
+&lt;p&gt;成绩出来啦。投档分735，市排1992。&lt;br&gt;
+总算是有高中读了。仰望星空中（张   嘴   睁   眼）&lt;br&gt;
+看上去班里那些强的一批的学霸还是发挥稳定呢，考进全市前1000，想都不敢想啊。&lt;br&gt;
+我对自己的成绩感到很意外。说实话以我中考的状态来看，中考完我能维持理智活下去就已经是奇迹了。&lt;br&gt;
+整个初中三年都是在“自我怀疑”“反思”与失眠中度过的。现在看来语文老师在初二年就说过我：不能妄自菲薄。&lt;br&gt;
+但我毕竟接受的教育是“挨打要立正”。也是因为这个，哪怕没人责备我我也会责备自己，哪怕没人鞭策我我也会鞭策自己。为此拼命否定他人的认可，尽全力磨灭自己存在的价值，却又拖着这样的心态努力，甚至在这种情况下取得了成绩...而这一切的根源只是因为父亲在我小时候反反复复的批评我“过于自信”。现在看来小时候的我是不是过于自信已经不重要了，重要的是：在一个孩子的童年时期挫败TA的自信心，对TA心理层面的伤害将是无法估量的。当然，保持谦逊绝对有着积极作用。&lt;br&gt;
+多么矛盾啊。人类就是如此矛盾的生物啊。&lt;/p&gt;
+&lt;h2 id=&#34;2022710&#34;&gt;2022.7.10&lt;/h2&gt;
+&lt;p&gt;新的日记（锵锵～）&lt;br&gt;
+发现之前的日记太乱了，于是重新整一个！&lt;/p&gt;
+">一凛的小本本（2022年暑假开始的）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://shelter.ichrin.eu.org/post/projektshadows/"" data-c="
+          &lt;h1 id=&#34;注释0指的是凛即游戏中的引导者可操控角色1指的是玩家游戏的视角指旁白-是选项-数字后带的部分是心理动态&#34;&gt;注释：“0”指的是凛（即游戏中的引导者，可操控角色），“1”指的是玩家（游戏的视角），“%”指旁白，“-”是选项。数字后带*的部分是心理动态。&lt;/h1&gt;
+&lt;h4 id=&#34;说明projekt-shadows最终解释权归7lab-1rin所有-请注意projekt-shadows仅仅为开发代号并无实际意义-剧情流程将随着开发进度而更新且现有剧情并非最终版本随着更新将会改动&#34;&gt;说明：Projekt-Shadows最终解释权归7Lab-1rin所有。请注意:Projekt-Shadows仅仅为开发代号，并无实际意义。剧情流程将随着开发进度而更新，且现有剧情并非最终版本，随着更新将会改动。&lt;/h4&gt;
+&lt;h2 id=&#34;序章chapter-0losing-your-way-in-my-mind&#34;&gt;序章(CHAPTER 0)Losing your way in my mind.&lt;/h2&gt;
+&lt;h4 id=&#34;2022年更新此projekt暂时停更&#34;&gt;2022年更新：此Projekt暂时停更。&lt;/h4&gt;
+&lt;h3 id=&#34;0&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;醒了吗？&lt;br&gt;
+嘿。&lt;br&gt;
+喂！&lt;br&gt;
+怎么回事，应该醒了才对。难道是出了什么故障？&lt;br&gt;
+（用手敲了敲）&lt;/p&gt;
+&lt;h3 id=&#34;1&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;-还没醒呢。&lt;br&gt;
+-其实我...已经醒了。&lt;/p&gt;
+&lt;h3 id=&#34;0-2&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;什么嘛，明明就是醒了。我还以为你要再睡几百年呢。&lt;br&gt;
+醒了就好。你...哦不对，那个...&lt;br&gt;
+哎呀，我还不知道该怎么称呼你。话说叫你什么名字好呢？&lt;/p&gt;
+&lt;h3 id=&#34;1-2&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;这样啊。那我就叫[org.godotengine.key==typeinputservice$saveas&amp;quot;username&amp;quot;]好了。&lt;/p&gt;
+&lt;h3 id=&#34;&#34;&gt;%：&lt;/h3&gt;
+&lt;p&gt;真是...连名字都不会起的人居然能招呼玩家，心真大。旁白君叹气中。&lt;br&gt;
+哦，对了，欢迎来到DUMMY WORLD.&lt;br&gt;
+我是旁白君。（为什么旁白要做自我介绍呢）&lt;br&gt;
+本来应该在游戏里毫无存在感的说...&lt;br&gt;
+可是我觉得有必要用这种方式蹭蹭存在感。&lt;br&gt;
+（糟糕，再讲下去序章都要被我填满了啊）&lt;br&gt;
+请不要忽视我哦。&lt;/p&gt;
+&lt;h3 id=&#34;1-3&#34;&gt;1*：&lt;/h3&gt;
+&lt;p&gt;我身处于一个...玻璃容器里面？&lt;br&gt;
+稍微活动一下，四周充斥着粘稠的液体。&lt;br&gt;
+容器镜面的反光让我能够看见自己的面容。&lt;br&gt;
+有点在意容器外的少女，她是谁？我完全没有印象。&lt;/p&gt;
+&lt;h3 id=&#34;-2&#34;&gt;%：&lt;/h3&gt;
+&lt;p&gt;看看外面。&lt;br&gt;
+那个连名字都不会起的人像敲门一样，抬起了手。你倒是敲啊，磨磨蹭蹭的干啥呢。&lt;br&gt;
+容器好像动了起来。是软的？等下啊，她还没敲呢！卧槽我以为是玻璃呢。所以究竟是个啥嘛。&lt;/p&gt;
+&lt;h3 id=&#34;0-3&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;嗨~看得到我对吧？&lt;/p&gt;
+&lt;h3 id=&#34;1-4&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;看得到你。你是谁呢...&lt;/p&gt;
+&lt;h3 id=&#34;0-4&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;我是你爹哦。&lt;/p&gt;
+&lt;h3 id=&#34;1-5&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;？&lt;/p&gt;
+&lt;h3 id=&#34;-3&#34;&gt;%：&lt;/h3&gt;
+&lt;p&gt;哇，原来你爹是女装大佬吗...我有点兴奋呢。（激动脸）&lt;br&gt;
+不不不不你误会了，不是性兴奋。&lt;/p&gt;
+&lt;h3 id=&#34;0-5&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;在问我是谁之前先告诉我你想要的性别吧。&lt;/p&gt;
+&lt;h3 id=&#34;-4&#34;&gt;%：&lt;/h3&gt;
+&lt;p&gt;请选择你希望的性别。&lt;br&gt;
+-男&lt;br&gt;
+-女&lt;/p&gt;
+&lt;h3 id=&#34;-5&#34;&gt;%：&lt;/h3&gt;
+&lt;p&gt;不会吧，不仅没有给自己的作品起个名字，居然把性别的主动选择权都放弃了？我的老天。是太懒了吗？&lt;br&gt;
+哦我明白了。这是人道主义精神的光芒！每个生物都有选择自己的名字和自己的性别的权利！啊！太棒了！&lt;br&gt;
+所以我也换个名字？比如“龐栢菌”？“庞白君”？等下，我不是生物QAQ我只是一段程序啊。&lt;br&gt;
+不过啊。放在那场浩劫的几十年前，连复制人都是“违背人道主义精神”的呢。很难想象不到一个世纪，大家都对诸如“克隆人”“复制人”大大改观，纷纷默许了类似的项目呢。&lt;/p&gt;
+&lt;h3 id=&#34;1-6&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;啊啊啊。&lt;br&gt;
+突然被塞入了一些...知识？&lt;/p&gt;
+&lt;h3 id=&#34;-6&#34;&gt;%：&lt;/h3&gt;
+&lt;p&gt;是常识哦。是听不懂吗？&lt;/p&gt;
+&lt;h3 id=&#34;1-7&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;不是啦，听得懂，只不过这种时候听到这些对我来说太突然了。&lt;/p&gt;
+&lt;h3 id=&#34;0-6&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;真好啊。看起来理解能力没有问题呢。（举起一块牌子）&lt;br&gt;
+看得清牌子上面的字吗？&lt;/p&gt;
+&lt;h3 id=&#34;1-8&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;额...嗯，看得清。从左到右分别是蓝色的D、绿色的U、黄色的M、橙色的M和红色的Y。组合起来是“DUMMY”，傀儡、木偶的意思？&lt;/p&gt;
+&lt;h3 id=&#34;0-7&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;（拿起平板电脑记录）语言中枢没问题。不是色盲、视力正常。听觉尚可。&lt;br&gt;
+好啦！这样你就可以安心出厂...不对。&lt;br&gt;
+这样，你就可以安心“出世”了。&lt;br&gt;
+我叫做凛，应该是你的...嗯...老师？类似这样的角色吧。之前说我是你爹，不是认真的啦。&lt;br&gt;
+欢迎出生！&lt;/p&gt;
+&lt;h3 id=&#34;-7&#34;&gt;%：&lt;/h3&gt;
+&lt;p&gt;啊！这样序章就结束啦。可喜可贺，可喜可...&lt;/p&gt;
+&lt;h3 id=&#34;1-9&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;凛？嗯...DUMMY？哦等等...我...&lt;br&gt;
+我？&lt;br&gt;
+我是谁？我不是凛。我不是、我不是吧？我是我。我是自己。啊？&lt;br&gt;
+那“我”是谁？“自己”是谁？谁是傀儡？“谁”是谁？&lt;br&gt;
+是谁在这副躯体里面？&lt;/p&gt;
+&lt;h3 id=&#34;-8&#34;&gt;%：&lt;/h3&gt;
+&lt;p&gt;糟糕。心智波形紊乱。&lt;br&gt;
+咋回事啊，突然傻了？前面挺正常的啊。&lt;/p&gt;
+&lt;h3 id=&#34;0-8&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;...看来人格缺损还是解决不了吗？&lt;br&gt;
+（叹气）安心睡会儿吧。你已经是目前为止唯一一个...&lt;br&gt;
+算了。不还是失败了吗。&lt;/p&gt;
+&lt;p&gt;CHATPER 0 END&lt;/p&gt;
+&lt;h2 id=&#34;第05章chapter-05welcome-to-the-dummy-world&#34;&gt;第0.5章（CHAPTER 0.5）Welcome to the DUMMY WORLD.&lt;/h2&gt;
+&lt;h3 id=&#34;-9&#34;&gt;%:&lt;/h3&gt;
+&lt;p&gt;一个月后。准备再度唤醒[org.godotengine.cache==/tmp/username]。&lt;br&gt;
+克隆人和复制人的心智都是按照母本的模板构建的，所以完成时不存在心智方面的问题。但是有一种实验体不同，它们有一半的染色体是完全从零开始构建的，另一半即使是基于人类卵子，也经过了人为修改，只为了更好的性能。但几乎是人工制造的胚胎细胞分裂出来的个体的心智是不完全的。&lt;br&gt;
+这就是“人格缺损”。目前为止发生人格缺损的个体都销毁了。因为曾经的实验数据表明人格缺损会导致严重的记忆错乱，具体点就是...&lt;br&gt;
+梦境与现实重叠，记忆中梦里的事情会被误认为是真实发生过的，强烈怀疑自己的存在，极度自卑和沟通障碍。&lt;br&gt;
+这些个体大多数在被唤醒的一刻就失控，根本无法进行后续的测试。迄今为止只有一个个体通过了初步的测试，却在最后关头失控。我不抱什么期待了。不过她可真执着。&lt;/p&gt;
+&lt;h3 id=&#34;0-9&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;醒了吗？&lt;br&gt;
+嘿！&lt;/p&gt;
+&lt;h3 id=&#34;1-10&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;啊啊！凛。我睡了多久呢？&lt;/p&gt;
+&lt;h3 id=&#34;0-10&#34;&gt;0 &amp;amp; %&lt;/h3&gt;
+&lt;p&gt;什么？？！&lt;/p&gt;
+&lt;h3 id=&#34;0-11&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;怎么会...你还记得我吗？&lt;/p&gt;
+&lt;h3 id=&#34;1-11&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;记得呀，你叫作凛，是我的老师之类的角色吧。之前你说你是我爹，不是认真的。&lt;/p&gt;
+&lt;h3 id=&#34;0-12&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;（抄起平板电脑）&lt;br&gt;
+奇迹啊。成功了！&lt;br&gt;
+那...你知道你是谁吗？&lt;/p&gt;
+&lt;h3 id=&#34;1-12&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;我是[org.godotengine.cache==/tmp/username]，名字是自己起的，性别是自己选的。&lt;/p&gt;
+&lt;h3 id=&#34;0-13&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;那“自己”是谁？&lt;/p&gt;
+&lt;h3 id=&#34;1-13&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;“自己”和“我”应该是类似的意思吧。&lt;/p&gt;
+&lt;h3 id=&#34;0-14&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;嗯...那“DUMMY”呢？&lt;/p&gt;
+&lt;h3 id=&#34;1-14&#34;&gt;1：&lt;/h3&gt;
+&lt;p&gt;是傀儡、木偶的意思？&lt;/p&gt;
+&lt;h3 id=&#34;0-15&#34;&gt;0：&lt;/h3&gt;
+&lt;p&gt;对！&lt;br&gt;
+虽然说过一次了，但是...&lt;br&gt;
+欢迎...呃，出生？&lt;br&gt;
+好奇怪的说法啊。&lt;/p&gt;
+&lt;p&gt;CHATPER 0.5 END&lt;/p&gt;
+&lt;p&gt;未完待续。&lt;/p&gt;
+">Projekt-Shadows 剧情流程（截止Alpha0.0.2.67）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://shelter.ichrin.eu.org/post/bangumi-sharelist/"" data-c="
+          &lt;h1 id=&#34;排名不分先后&#34;&gt;排名不分先后&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;零之使魔&lt;/li&gt;
+&lt;li&gt;绯弹的亚里亚&lt;/li&gt;
+&lt;li&gt;宝石之国&lt;/li&gt;
+&lt;li&gt;CLANNAD&lt;/li&gt;
+&lt;li&gt;魔法禁书目录 系列&lt;/li&gt;
+&lt;li&gt;某科学的超电磁炮 系列&lt;/li&gt;
+&lt;li&gt;斩服少女&lt;/li&gt;
+&lt;li&gt;卡罗尔和星期二&lt;/li&gt;
+&lt;li&gt;天元突破&lt;/li&gt;
+&lt;li&gt;超时空要塞TV&lt;/li&gt;
+&lt;li&gt;少女终末旅行&lt;/li&gt;
+&lt;li&gt;四月是你的谎言&lt;/li&gt;
+&lt;li&gt;可塑性记忆&lt;/li&gt;
+&lt;li&gt;charlotte&lt;/li&gt;
+&lt;li&gt;新世纪福音战士 系列&lt;/li&gt;
+&lt;li&gt;约会大作战 系列&lt;/li&gt;
+&lt;li&gt;魔法少女小圆&lt;/li&gt;
+&lt;li&gt;我的青春恋爱物语果然有问题 系列&lt;/li&gt;
+&lt;li&gt;狼与香辛料 系列&lt;/li&gt;
+&lt;li&gt;花开伊吕波 系列&lt;/li&gt;
+&lt;li&gt;旋风管家 系列&lt;/li&gt;
+&lt;li&gt;辉夜大小姐想让我告白 系列&lt;/li&gt;
+&lt;li&gt;刀剑神域 系列&lt;/li&gt;
+&lt;li&gt;冰菓&lt;/li&gt;
+&lt;li&gt;灼眼的夏娜&lt;/li&gt;
+&lt;li&gt;超时空要塞Δ&lt;/li&gt;
+&lt;li&gt;青春猪头少年不会梦到兔女郎学姐&lt;/li&gt;
+&lt;li&gt;少女☆歌剧&lt;/li&gt;
+&lt;li&gt;赛马娘 系列&lt;/li&gt;
+&lt;li&gt;来自深渊&lt;/li&gt;
+&lt;li&gt;未完待续。。。&lt;/li&gt;
+&lt;/ol&gt;
+">荐番目录！(持续更新)</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://shelter.ichrin.eu.org/post/diary-of-ichrin/"" data-c="
+          &lt;h2 id=&#34;20201231&#34;&gt;2020.12.31&lt;/h2&gt;
+&lt;p&gt;这是我的“日记”&lt;br&gt;
+但是，并不会每天都更新，甚至每月更新一次都有点困难（苦笑）&lt;br&gt;
+取消了之前一篇日记一个文章的设计，这个博客里的绝大部分日记都会放在这个文章里。&lt;br&gt;
+可以通过日期来查看。目前还没想好一个合适的方式来进行检索...没办法嘛，我也要学会hard coding才可以啦。&lt;/p&gt;
+&lt;h2 id=&#34;202111&#34;&gt;2021.1.1&lt;/h2&gt;
+&lt;p&gt;新年快乐~新的一年也要更加努力！&lt;br&gt;
+度过了一个艰难的2020。好在2020年没去过几次医院。&lt;/p&gt;
+&lt;h2 id=&#34;2021117&#34;&gt;2021.1.17&lt;/h2&gt;
+&lt;p&gt;期末考试。一共要考八科，其中六科还是全市统考啊。&lt;br&gt;
+希望考差一点，给挑战我的人一个新年礼物吧，毕竟独乐乐不如众乐乐对吧？&lt;/p&gt;
+&lt;h2 id=&#34;2021121&#34;&gt;2021.1.21&lt;/h2&gt;
+&lt;p&gt;所有成绩都出来了。果然不出我所料，考得很差。语文数学连120都没上。历史只考了84分。&lt;br&gt;
+作业有点多但可以提前写完。&lt;br&gt;
+嗯，这是很棒的新年礼物，看见自己挑战的对象被自己战胜还不得不写更多的作业，他们应该很高兴吧。&lt;/p&gt;
+&lt;h2 id=&#34;202128&#34;&gt;2021.2.8&lt;/h2&gt;
+&lt;p&gt;作业写完啦！！！！！！！！&lt;br&gt;
+写的超级潦草(●&#39;◡&#39;●)&lt;/p&gt;
+&lt;h2 id=&#34;2021212&#34;&gt;2021.2.12&lt;/h2&gt;
+&lt;p&gt;新春快乐！&lt;br&gt;
+今晚大年三十，家人在看春晚，我在看哔哩哔哩拜年祭。&lt;br&gt;
+今年拜年祭改名了，把“祭”改成“纪”，本意上是好的，可拜年祭本来就是日本词汇，这样咬文嚼字看上去很做作，没有必要。拜年祭的节目除了hanser泠鸢鹿乃祖娅纳惜唱的《吉祥话》以外没什么特别的。弹幕都是重复刷屏的，看上去就像是机器人发的。&lt;br&gt;
+好在整体观感不算差，至少比央视春晚强多了。ㄟ( ▔, ▔ )ㄏ&lt;/p&gt;
+&lt;h2 id=&#34;2021214&#34;&gt;2021.2.14&lt;/h2&gt;
+&lt;p&gt;情人节是啥？能吃吗？&lt;br&gt;
+显而易见不能，管它能不能吃，与我无瓜就对了。&lt;br&gt;
+虽然我知道纸片人是没有感情的，但是在虚拟世界里多浪费荷尔蒙也比在现实中谈恋爱简单不是吗？&lt;br&gt;
+况且像我这样的怪人不可能有人会喜欢的。&lt;/p&gt;
+&lt;h2 id=&#34;2021215&#34;&gt;2021.2.15&lt;/h2&gt;
+&lt;p&gt;距离寒假结束仅剩一周。&lt;br&gt;
+有点担心开学之后作业不合格，因为写的太快，太潦草，太敷衍。&lt;/p&gt;
+&lt;h2 id=&#34;2021216&#34;&gt;2021.2.16&lt;/h2&gt;
+&lt;p&gt;奇蛋物语绝对是一月番的黑马！！！FLAG已立！( •̀ ω •́ )✧&lt;/p&gt;
+&lt;h2 id=&#34;2021217&#34;&gt;2021.2.17&lt;/h2&gt;
+&lt;p&gt;少女前线的世界观原来这么大啊，剧情确实不错，感觉这应该不是个讲策略的游戏，而是个剧情向的游戏。&lt;/p&gt;
+&lt;h2 id=&#34;2021220&#34;&gt;2021.2.20&lt;/h2&gt;
+&lt;p&gt;明天居然要开学考...虽然有预感但没想到预感得这么准QAQ&lt;br&gt;
+语文数学一定会挂科，应该连105都上不了。&lt;/p&gt;
+&lt;h2 id=&#34;2021223&#34;&gt;2021.2.23&lt;/h2&gt;
+&lt;p&gt;数学正好卡在105哈哈哈哈哈&lt;/p&gt;
+&lt;h2 id=&#34;2021225&#34;&gt;2021.2.25&lt;/h2&gt;
+&lt;p&gt;语文连100都没上，考了个96...我是不是应该献祭我的寿命来换我的语文成绩呢？&lt;/p&gt;
+&lt;h2 id=&#34;2021225-2&#34;&gt;2021.2.25&lt;/h2&gt;
+&lt;p&gt;段排还能进前100就很离谱！我怀疑段长是用脚排的段排名！&lt;/p&gt;
+&lt;h2 id=&#34;202135&#34;&gt;2021.3.5&lt;/h2&gt;
+&lt;p&gt;嗯，我们班的女生有的还是很可爱的，虽然彪悍的占多数。&lt;/p&gt;
+&lt;h2 id=&#34;202137&#34;&gt;2021.3.7&lt;/h2&gt;
+&lt;p&gt;其实我死了吧。大概。&lt;/p&gt;
+&lt;h2 id=&#34;2021313&#34;&gt;2021.3.13&lt;/h2&gt;
+&lt;p&gt;又要月考了，慌的一批。&lt;/p&gt;
+&lt;h2 id=&#34;2021325&#34;&gt;2021.3.25&lt;/h2&gt;
+&lt;p&gt;这个月过的真的好快啊...果然是因为上学所以才有的错觉吗？&lt;/p&gt;
+&lt;h2 id=&#34;202141&#34;&gt;2021.4.1&lt;/h2&gt;
+&lt;p&gt;新的一个月！再过两天就放清明节假了！啊感觉今年没多少人在过愚人节啊。今天放学好早，取消了最后一节课（愚人节？是真的啦）&lt;/p&gt;
+&lt;h2 id=&#34;2021412&#34;&gt;2021.4.12&lt;/h2&gt;
+&lt;p&gt;嗯，如你所见，好久没更新了。&lt;br&gt;
+最近腰拉伤了，连走路都会感觉到痛...体育课、体锻啥的自然是停掉了。&lt;br&gt;
+一定要保护好身体啊。&lt;/p&gt;
+&lt;h2 id=&#34;202151&#34;&gt;2021.5.1&lt;/h2&gt;
+&lt;p&gt;小中考要来了。&lt;br&gt;
+这可能是小中考前最后一次更新也说不定。&lt;br&gt;
+好害怕&amp;gt; &amp;lt;&lt;/p&gt;
+&lt;h2 id=&#34;2021626&#34;&gt;2021.6.26&lt;/h2&gt;
+&lt;p&gt;明天考试啦！！！&lt;br&gt;
+好慌啊。小中考是真正能够决定我的命运走向的考试啊。&lt;br&gt;
+仍旧不够坦率的我，究竟会迎来什么样的结局呢？&lt;/p&gt;
+&lt;h2 id=&#34;202171&#34;&gt;2021.7.1&lt;/h2&gt;
+&lt;p&gt;今天回校讲评试卷。说是这样，实际上只有英语、语文、物理三科真的有把卷子拿起来讲。剩下的时间要么看《觉醒年代》要么看电影。&lt;br&gt;
+今天突然觉得真心话大冒险似乎也没那么可怕，今天有位同学和我玩真心话大冒险，问了一些居然不是那么让人难堪的问题（7Lab里面天天问内裤颜色！！）那位同学问我“是会选择喜欢的人还是追你的人”&lt;br&gt;
+哎呀呀，当然是追我的人啊（因为不可能有人会追我这种死宅啊hhh），“我喜欢的人”不一定喜欢我，如果对方讨厌我的话我的喜欢反而会给对方添麻烦不是吗？而“追我的人”（反正不可能存在啦）应该是喜欢我的，所以只要我经全力去喜欢追我的人，就不会给别人添麻烦了嘛。&lt;/p&gt;
+&lt;h2 id=&#34;202172&#34;&gt;2021.7.2&lt;/h2&gt;
+&lt;p&gt;初二年，闭学式。&lt;br&gt;
+退队嘞。（笑）&lt;br&gt;
+这也代表着，要初三了。&lt;br&gt;
+(´。＿。｀)&lt;/p&gt;
+&lt;h2 id=&#34;202173&#34;&gt;2021.7.3&lt;/h2&gt;
+&lt;p&gt;暑假正式开始！！&lt;br&gt;
+一直不敢看CLANNAD。因为太催泪了。这个暑假一定要把它看一遍。&lt;br&gt;
+说实话，两季共48话，我花一天就能看完。&lt;br&gt;
+顺便，这个暑假还有很多番要补。补番目录就另外开一个页面吧~&lt;/p&gt;
+&lt;h2 id=&#34;2021810&#34;&gt;2021.8.10&lt;/h2&gt;
+&lt;p&gt;暑假快要结束了。&lt;br&gt;
+按照作业单上的通知似乎28号开学的样子。也就是说，还剩18天。&lt;br&gt;
+这个暑假我猜很多同学（新初三的同学）会去补习、上课。而我啥都没有。没补习也没上课。新开的化学课，化学书很多都看不懂。数学书更像是天书一样。&lt;br&gt;
+要挂科嘞。&lt;/p&gt;
+">一凛的小本本（2021年初-2021年夏季）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://shelter.ichrin.eu.org/post/gong-gao-ban/"" data-c="
+          &lt;h3 id=&#34;20201231&#34;&gt;2020.12.31&lt;/h3&gt;
+&lt;p&gt;从2021年开始，这个博客将正式启用。&lt;br&gt;
+原先的博客（如果你知道的话）已经停更，内容将不会继续更新。&lt;/p&gt;
+&lt;h1 id=&#34;简单介绍一下ヾo&#34;&gt;简单介绍一下ヾ(≧▽≦*)o&lt;/h1&gt;
+&lt;p&gt;这是我的避难所（Shelter）。&lt;br&gt;
+很多平常不会说的、不愿意说的、不敢说的话，我都放会在这里。&lt;br&gt;
+这个博客上也会放一些我自己的、社团内部的projects相关内容，因为博客本质上是Github Pages，所以内容不会很多。&lt;br&gt;
+目前并不限制任何人访问，但限制访问时间。&lt;br&gt;
+博客实装了评论功能，任何人都可以评论。但是请注意评论的内容不得触犯现有已颁布的任何法律法规。同时，切勿在评论区提及我的姓名，评论时不得阴阳怪气、人身攻击，违者将会被我画圈圈诅咒ヾ(≧へ≦)〃&lt;br&gt;
+在博客中分享的一些文件、应用，请勿传播。教程类的博文允许在注明原作者的前提下分享。&lt;br&gt;
+虽然知道没有人会看就是了...&lt;br&gt;
+以上。&lt;/p&gt;
+&lt;p&gt;一凛Ichrin&lt;br&gt;
+2020.12.31&lt;/p&gt;
+">公告板</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://shelter.ichrin.eu.org/post/projekt-notitle/"" data-c="
+          &lt;h2 id=&#34;怀着乱七八糟的心情和乱七八糟的想法所写的乱七八糟的东西&#34;&gt;怀着乱七八糟的心情和乱七八糟的想法所写的乱七八糟的东西。&lt;/h2&gt;
+&lt;h2 id=&#34;翻译一下就是这个文章是随便乱写的不要当真-如有雷同纯属巧合&#34;&gt;翻译一下就是：这个文章是随便乱写的，不要当真。如有雷同纯属巧合。&lt;/h2&gt;
+&lt;h2 id=&#34;欢迎补全设定可以发邮件到ichrinyeahnet向我提出如果采纳的话将会备注上你期望的备注名~&#34;&gt;欢迎补全设定！可以发邮件到ichrin@yeah.net向我提出，如果采纳的话将会备注上你期望的备注名～&lt;/h2&gt;
+&lt;h2 id=&#34;文中所出现的人物名字皆为邮政式拼音但所对应的汉字均具有意义还请多思考思考&#34;&gt;文中所出现的人物名字皆为邮政式拼音，但所对应的汉字均具有意义，还请多思考思考。&lt;/h2&gt;
+&lt;h1 id=&#34;本篇&#34;&gt;本篇&lt;/h1&gt;
+&lt;h2 id=&#34;chapter-1-reburn&#34;&gt;CHAPTER 1 Reburn&lt;/h2&gt;
+&lt;p&gt;睁开眼睛。&lt;br&gt;
+半透明的曲面穹顶映照出我的脸，我仔细端详穹顶，能隐约看清自己的样貌—这多亏了身边的灯条提供了照明。&lt;br&gt;
+这是张既熟悉又陌生的面庞，我明明很确定这是自己的脸，心中却又有莫名的违和感。&lt;br&gt;
+我根本不理解现在的状况。我是谁？我来自哪里？我应该做什么？没有答案。我只知道我现在所在的是收容仓，余下的一切我就不清楚了。&lt;br&gt;
+穹顶之外还有一层层收容仓，好像都开启了...因为我目前看到的都是已经打开的收容仓，所以我应该是最后一个出来的人咯。&lt;br&gt;
+没啥好思考的了。我向上推着穹顶，可无论怎么使劲都没办法让它移动。于是我想找个工具来打开它—自然是没有的，收容仓内除了我和一张金属卡片外没有其他东西。难道这张卡片可以派上用场吗？怎么看都不像。&lt;br&gt;
+于是我又开始思考了。&lt;br&gt;
+蝴蝶破茧而出要经历艰难的挣扎，只有自己破开茧的蝴蝶才能飞翔...那是否意味着，无法自己脱离收容仓的我不具有生存的权利呢？&lt;br&gt;
+是这样吧。于是我躺下身，想象自己是不愿意离开茧的蝴蝶...然而手肘突然碰到了什么地方—几乎是同时，脚边弹起来一只扶手。&lt;br&gt;
+哦？这是打开穹顶的机关么。&lt;br&gt;
+我试着用脚踩这只扶手，然而它纹丝不动。是要我拉起这个扶手吗？我用极其扭曲的姿势把手伸向扶手，往后一拉—&lt;br&gt;
+穹顶升起，我被外面的温度凉得打了个冷颤。我身上只披着薄薄的长袍，而收容仓内外的温度差了起码有二十摄氏度！我这是穿越到了冰河世纪吗？&lt;br&gt;
+收容仓的灯条逐渐熄灭，随后仓外的道路上亮起了指示灯。看来是要我跟着灯前进吧？我跨出收容仓，向着指示灯所指的尽头走去。&lt;br&gt;
+不知走了多久，我看到了柜子—应该说是一个塞满了柜子的房间。只有一个柜子还没被打开，此时那个柜子的指示灯正闪烁着。&lt;br&gt;
+那是我的柜子吗？我好奇地按下柜子上的按钮，但柜子不理我。&lt;br&gt;
+我又按了几次，还是没反应。&lt;br&gt;
+我干脆按住按钮不松开了，顺便仔细观察这些柜子。显而易见，其他柜子的主人们都拿走了属于他们的东西，柜门都不见了。他们现在在哪呢？&lt;br&gt;
+过了一小会儿，有人跑来了，看上去是个挺粗心的人：她的发带扎反了，领口的丝结看上去像是随便扎的。无论如何有人来就好啦。&lt;br&gt;
+等她走近了我才发现了奇怪的地方。这个看上去瘦弱而年轻到甚至有些孩子气的女子居然背着一柄斧头。&lt;br&gt;
+我还没细想，她已经抡起斧头砸开了我的柜子。然后熟练地从破开大洞的柜门里拿出我的东西，用一只手拆下残缺的柜门，另一只手把我的东西塞进我的怀里。&lt;br&gt;
+发生了什么？？&lt;br&gt;
+等不及我多想，少女喊着“欢迎来到新世界”，又飞奔而去了。留下了我傻在原地。&lt;br&gt;
+缓过神后，我开始查看这些属于我的东西。&lt;br&gt;
+一张档案、一个平板、一张皱巴巴、坑坑洼洼的纸和一盒不明金属。&lt;br&gt;
+我翻了翻档案。我的名字叫Dze Tyan...全是我不知道的信息。不过现在我可终于知道我叫啥了。&lt;br&gt;
+唯独没找到年龄啊。于是我打开平板——&lt;br&gt;
+屏幕几乎没发光，正中央白色的“12”这个数字格外刺眼。&lt;br&gt;
+几乎是同时，地板上的灯条又亮了。这次要我去哪？我稍微往前走了几步，看到了一座电梯。&lt;br&gt;
+灯条到电梯门口就熄灭了。意思大概是要我上电梯吧？我没多想，走进电梯里。&lt;br&gt;
+门缓缓合上，紧接着是没有尽头一般的上升。不知道过了多久电梯才停下来，门缓缓打开，我发觉刚刚是在地底下，因为现在眼前毫无疑问是海。海啊，生命由此诞生，而生命之水不足以容纳万千生灵的魂魄，生命们被迫离开海洋...不过要不是这样，世界会很无聊吧。&lt;br&gt;
+我左右看看，没看到期望中的人群，只看到茫茫沙漠。远处似乎有绿洲，但看上去不像有人迹的样子。&lt;br&gt;
+我想回到庇护所内。但显然，身为最后一个苏醒者，既没有可能和下一位苏醒者一起回到庇护所里，也没有可能用手中的一张金属片、一盒同样不明的金属和一个平板打开电梯门。&lt;br&gt;
+于是我......&lt;br&gt;
+我昏倒了。&lt;br&gt;
+然后才是一切的开始。&lt;br&gt;
+如此突然，我也不习惯，但现实就是如此吧？&lt;/p&gt;
+&lt;h2 id=&#34;chapter-2-who-am-i&#34;&gt;CHAPTER 2 Who am I？&lt;/h2&gt;
+&lt;p&gt;又一次睁开眼，是陌生的天花板。我接下来的任务应该不会是驾驶机器人打怪兽吧？&lt;br&gt;
+当然不是。醒来不久后就有有一群人出现在我的视线里。他们简单的说明了我的处境——庇护所边上的绿洲上没有人迹，纯粹是因为绿洲是一座山的山顶，而城市在山脚下。我是这个区域内最后一个苏醒者。我现在在我的宿舍里，我的舍友三个月内会到这里和我一起住...&lt;br&gt;
+我完全混乱，搞不清楚状况。&lt;br&gt;
+那么我看到的海又是什么？山上的海？怎么可能啊。一切的一切都不在我的认知内。总之，那群人给了我一个档案袋和一个新平板，顺便放了几件衣服在衣柜里。然后和他们莫名其妙的出现一样，在我茫然的眼神中走了。&lt;br&gt;
+我躺床上想不通，干脆翻身睡觉。可怎么也睡不着啊！这是必然的，我已经在庇护所内睡了不知道多久，现在再睡下去也不太可能。拿起档案看看？这么想着，我已经打开了档案袋。&lt;br&gt;
+性别、血型、过敏源...这些是先前就知道的信息。额外的信息是，我现在12岁，我所在的区域是D-Part，我的职业是...铁路维护员？&lt;br&gt;
+12岁就工作吗？妥妥地雇佣童工啊喂。边这么想着边启动平板电脑。&lt;/p&gt;
+&lt;p&gt;[未完待续]&lt;/p&gt;
+&lt;h1 id=&#34;额外篇&#34;&gt;额外篇&lt;/h1&gt;
+&lt;h2 id=&#34;chapter-04间before-the-impact&#34;&gt;CHAPTER 0.4•间：Before the impact&lt;/h2&gt;
+&lt;p&gt;第三次世界大战前夕。&lt;br&gt;
+原•北极中部，北冰洋海平面以下一千米。&lt;br&gt;
+试作型庇护所内。&lt;br&gt;
+从法律上讲，其实我本不应该呆在这个鬼地方。我应该站在战场上，作为南极联盟的一员亲身参与这场即将开始的人间浩劫。&lt;br&gt;
+但与此同时，我建立庇护所的目的不就是反抗战争么？这样的我若是前往战场，就是表里不一的虚伪。&lt;br&gt;
+我无法忘记当年联合国重组时，烧到孤儿院的战火。归根究底，少数人所追求的利益导致了多数人受到的灾难，而无辜且无知的人们只能在绝境中垂死挣扎。&lt;br&gt;
+我想不通，从战火里爬出来的，我们这一代人——究竟抱着什么动机才能再次发动战争？经历过悲剧的人不向往平淡幸福的命运，却又将悲剧强加于别人之上？&lt;br&gt;
+思来想去，是这个世界出了问题。&lt;br&gt;
+试作型庇护所让我看到了人类可以拥有的一种可能性。运用人类的智慧，或许能推翻现有秩序，重构新世界也说不定。&lt;br&gt;
+或许庇护所，就是“新世界”计划的最后一环。&lt;br&gt;
+收音机里传来了军用无线电传送的空袭警报，看来第三次世界大战开始了。&lt;br&gt;
+我找了个墙角缓缓坐下。&lt;br&gt;
+庇护所外的那些人们正在用战争改变世界。&lt;br&gt;
+那庇护所内名为“择天”的我，有没有资格代表人类反抗呢？&lt;br&gt;
+没有人知道。&lt;/p&gt;
+">Projekt-暂无标题</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://shelter.ichrin.eu.org/post/shin-wa/"" data-c="
+          &lt;h2 id=&#34;这是一凛平时脑子里迸发的一些奇奇怪怪的点子&#34;&gt;这是一凛平时脑子里迸发的一些奇奇怪怪的点子。&lt;/h2&gt;
+&lt;h3 id=&#34;不要当真哦&#34;&gt;不要当真哦&lt;/h3&gt;
+&lt;h4 id=&#34;2021410&#34;&gt;2021.4.10&lt;/h4&gt;
+&lt;p&gt;学习，有没有一种可能，我们所学的东西不是我们想学的东西，而是“他们希望我们学的东西”。&lt;/p&gt;
+&lt;h4 id=&#34;2021415&#34;&gt;2021.4.15&lt;/h4&gt;
+&lt;p&gt;A-TField能维持人类的形态，让人类不至于化为一摊L.C.L. (生命原汤)。&lt;br&gt;
+而A-TField还有“心之壁”的意思。也就是说，人类正是因为彼此之间的隔阂才变成互相独立的个体的。&lt;/p&gt;
+&lt;h4 id=&#34;2021417&#34;&gt;2021.4.17&lt;/h4&gt;
+&lt;p&gt;给喜欢的人过生日的时候或许应该送做蛋糕的材料，而不应该送蛋糕。&lt;br&gt;
+因为送做蛋糕的材料，对方就能做自己喜欢吃的蛋糕了。&lt;/p&gt;
+&lt;h4 id=&#34;2021428&#34;&gt;2021.4.28&lt;/h4&gt;
+&lt;p&gt;如果给史前古猿一亿次重新进化的机会，它还会进化成人类吗？&lt;/p&gt;
+&lt;h4 id=&#34;2021430&#34;&gt;2021.4.30&lt;/h4&gt;
+&lt;p&gt;我们现在学的知识，好像只有外语和理科更实用，将来的生活中人们不一定需要背古文、背古诗之类的，但是数学物理生物地理化学历史，外语的英语似乎都很经常用...&lt;br&gt;
+哦对了，我说的就是汉语（语文）啊。身为中国人实际上最经常被使用的正是语文啊。&lt;/p&gt;
+&lt;h4 id=&#34;2021525&#34;&gt;2021.5.25&lt;/h4&gt;
+&lt;p&gt;众所周知，安卓基于linux，Linux基于bsd；iOS/macOS基于XNU，XNU是mach和BSD的缝合怪。&lt;br&gt;
+所以，bsd天下第一。&lt;/p&gt;
+&lt;p&gt;--未完待续&lt;/p&gt;
+">空想神话</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://shelter.ichrin.eu.org/post/about-me/"" data-c="
+          &lt;h4 id=&#34;姓名一凛ichrin-lee当然不是真名&#34;&gt;姓名：一凛（Ichrin Lee）——当然不是真名。&lt;/h4&gt;
+&lt;h4 id=&#34;年龄1516&#34;&gt;年龄：15（16）&lt;/h4&gt;
+&lt;h4 id=&#34;生日2006-10-18&#34;&gt;生日：2006-10-18&lt;/h4&gt;
+&lt;h4 id=&#34;性别无论是生理性别还是认知性别&#34;&gt;性别：♂（无论是生理性别还是认知性别）&lt;/h4&gt;
+&lt;h4 id=&#34;哪里人地球人&#34;&gt;哪里人：地球人&lt;/h4&gt;
+&lt;h4 id=&#34;所在地第三新amoy市不是&#34;&gt;所在地：第三新Amoy市（不是）&lt;/h4&gt;
+&lt;h4 id=&#34;联系方式e-mail-ichrinyeahnet&#34;&gt;联系方式：（E-mail） ichrin@yeah.net&lt;/h4&gt;
+&lt;h4 id=&#34;兴趣爱好acgn-天文学-生物学-自行车骑行-捣腾电子设备&#34;&gt;兴趣爱好：ACGN、天文学、生物学、自行车骑行、捣腾电子设备&lt;/h4&gt;
+&lt;h4 id=&#34;喜欢的东西acgn淡蓝色深蓝色面食&#34;&gt;喜欢的东西：ACGN，淡蓝色深蓝色，面食&lt;/h4&gt;
+&lt;h4 id=&#34;讨厌的东西碳酸饮料和任何太甜或太酸的东西麻烦的事情并排走路的人-挡路的人&#34;&gt;讨厌的东西：碳酸饮料和任何太甜或太酸的东西，麻烦的事情，并排走路的人、挡路的人&lt;/h4&gt;
+&lt;h4 id=&#34;性取向我喜欢的当然是女孩生物学意义上的女孩而且认同自己的生物学性别我对lgbt等字母群体持中立态度不赞成也不反对但我喜欢的人不会是这个群体的人&#34;&gt;性取向：我喜欢的当然是女孩（生物学意义上的女孩，而且认同自己的生物学性别，我对“LGBT等字母群体”持中立态度，不赞成也不反对，但我喜欢的人不会是这个群体的人。）&lt;/h4&gt;
+&lt;h4 id=&#34;理想型拥有美好的品德能用拥抱安慰我-也能用巴掌打醒我可以作为背对背的战友-也可以作为面对面的恋人&#34;&gt;理想型：拥有美好的品德，能用拥抱安慰我、也能用巴掌打醒我；可以作为背对背的战友、也可以作为面对面的恋人。&lt;/h4&gt;
+&lt;h4 id=&#34;感情状况毫无疑问的是单身&#34;&gt;感情状况：毫无疑问的是单身。&lt;/h4&gt;
+&lt;h4 id=&#34;感情经历幼儿园时和某个女孩互相告白是那种孩童的纯洁感情-当然没有后续了&#34;&gt;感情经历：幼儿园时和某个女孩互相告白，是那种孩童的纯洁感情。当然没有后续了。&lt;/h4&gt;
+&lt;h4 id=&#34;精神状况绝赞失眠中&#34;&gt;精神状况：绝赞失眠中。&lt;/h4&gt;
+&lt;h4 id=&#34;梦想暂时没有-世界和平&#34;&gt;梦想：暂时没有。世界和平？&lt;/h4&gt;
+&lt;h4 id=&#34;理想职业生物学工作者-或-每天工作八小时的工作拒绝996-007&#34;&gt;理想职业：生物学工作者 或 每天工作八小时的工作，拒绝996、007。&lt;/h4&gt;
+">关于我</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://shelter.ichrin.eu.org/post/ichrin-secret/"" data-c="
+          &lt;h1 id=&#34;不是吧不是吧不会真的有人相信这里有秘密吧&#34;&gt;不是吧不是吧，不会真的有人相信这里有秘密吧。&lt;/h1&gt;
+&lt;h6 id=&#34;既然点开来看了就姑且写点小秘密&#34;&gt;既然点开来看了就姑且写点小秘密。&lt;/h6&gt;
+&lt;p&gt;1.我集中注意力时间太久会伸懒腰。&lt;br&gt;
+2.我是阿斯伯格综合症患者。&lt;br&gt;
+3.我除了家人外抱有好感的人有三个，一个是幼儿园时期的告白对象，一个是小学一二年级的音乐老师，一个是某位挚友。&lt;br&gt;
+4.我说话的时候会下意识看着对方的眼睛。&lt;br&gt;
+5.我说谎的时候会在眼睛看着对方的同时改变头部姿势。&lt;br&gt;
+6.我小学时期说的话四成以上是谎言。&lt;br&gt;
+7.到目前为止我的朋友数量是1。（包括已去世的）&lt;br&gt;
+8.我说的话变短的时候说明心情不佳。&lt;br&gt;
+9.从小到大，我的头部受伤过至少5次（重伤）。&lt;br&gt;
+10.未完待续&lt;/p&gt;
+">小秘密</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/media/js/motion.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
+</script>
+
+
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/1rin/1rin.github.io@master/media/js/mouse/fireworks.js"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>
+
+
+</html>
